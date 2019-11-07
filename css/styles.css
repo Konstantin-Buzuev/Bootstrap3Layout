@@ -823,3 +823,32 @@ footer .social-networks a{
     padding-bottom: 5px;
     margin: 0 auto;
 }
+.btnShowKit{
+    background-color: #445162;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.btnSubmit{
+    background-color: #445162;
+    border: none;
+    color: white;
+    padding: 0px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+}
+.btnContainer{
+    text-align: center;
+}
+.
+.adminKit{
+    display: none;
+    
+}

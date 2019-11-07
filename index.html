@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/styles.css"> </head>
+<script>
+    let KitShown = false;
+
+    function onBtnClick() {
+        const form = document.getElementsByClassName("adminKit")[0];
+        const button = document.getElementsByClassName("btnShowKit")[0];
+        if (KitShown === false) {
+            KitShown = true;
+            form.style.display = "block";
+            button.innerHTML = "Hide admin kit";
+        }
+        else {
+            KitShown = false;
+            form.style.display = "none";
+            button.innerHTML = "Show admin kit";
+        }
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+        const btn = document.getElementsByClassName("btnShowKit")[0];
+        btn.addEventListener("click", onBtnClick);
+    })
+</script>
 
 <body>
     <div class="container">
@@ -34,7 +56,7 @@
                         <p>Pariatur iure ab&nbsp;sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</p>
                     </div>
                     <div class="col-md-6 video">
-                        <video id="video" src="video/Night%20-%201099.mp4" controls> </video>
+                        <video id="video" src="video/Night%20-%201099.mp4" controls preload="metadata" muted loop autoplay> </video>
                     </div>
                 </div>
             </section>
@@ -191,8 +213,8 @@
             <div class="row">
                 <form class="col-md-offset-1 col-md-6" action="#">
                     <fieldset>
-                        <input type="text" class="userName" placeholder="Your name:" required>
-                        <input placeholder="Your email:" type="email" required>
+                        <input type="text" class="userName" placeholder="Jhon Smith" pattern="^([ А-Яа-яA-Za-z]+)" required autofocus>
+                        <input placeholder="example@mail.com" type="email" required>
                         <textarea name="text" id="message" cols="30" rows="10" class="message" placeholder="Your message:" required></textarea>
                         <input type="submit" value="Send"> </fieldset>
                 </form> <address class="col-md-4 contact">
@@ -212,13 +234,48 @@
             </address></div>
         </footer>
         <div class="copyright">Copyright &copy; 2014 Product name · PSD HTML CSS</div>
+        <div class="btnContainer">
+            <button class="btnShowKit">Show admin kit</button>
+        </div>
+        <div class="adminKit" style="display: none">
+            <form action="" method="post">
+                <fieldset>
+                    <legend>Браузер клиента</legend>
+                    <label for="browser">Браузер</label>
+                    <input id="browser" list="browsers" name="myBrowser">
+                    <datalist id="browsers">
+                        <option label="Хром" value="Chrome"></option>
+                        <option label="Огненный лис" value="Firefox">></option>
+                        <option label="Эксплорер" value="InternetExplorer">></option>
+                    </datalist>
+                    <br>
+                    <input type="submit" value="Send" class="btnSubmit"> </fieldset>
+            </form>
+            <form action="" method="post">
+                <fieldset>
+                    <legend>Дата составления тикета</legend>
+                    <label for="date">Дата</label>
+                    <input name="date" id="date" type="date">
+                    <br>
+                    <label for="time">Время</label>
+                    <input name="time" id="time" type="time">
+                    <br>
+                    <label for="datetime-local">Текущая дата и время</label>
+                    <input name="datetime-local" id="datetime-local" type="datetime-local">
+                    <br>
+                    <label for="month">Месяц</label>
+                    <input name="month" id="month" type="month">
+                    <br>
+                    <label for="week">Неделя</label>
+                    <input name="week" id="week" type="week">
+                    <br>
+                    <input type="submit" value="Send" class="btnSubmit"> 
+                    </fieldset>
+            </form>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 
 </html>
-<!--
-  </footer>
-        
---!>
