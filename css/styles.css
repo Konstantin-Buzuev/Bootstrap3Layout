@@ -1,3 +1,10 @@
+/*OLD BROWSER SUPPORT*/
+audio, canvas, video {
+  display: inline-block;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
 /*COMMON*/
 *{
     margin: 0;
@@ -160,8 +167,6 @@ section h2{
 	position:relative;
 	top:1px;
 }
-
-
 /*HEADER*/
 header{
     background-color: #445162;

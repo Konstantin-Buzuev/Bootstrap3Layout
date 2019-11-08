@@ -7,40 +7,38 @@
     <title>Bootstrap 3 Layout</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/styles.css"> </head>
-<script>
-    let KitShown = false;
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        let KitShown = false;
 
-    function onBtnClick() {
-        const form = document.getElementsByClassName("adminKit")[0];
-        const button = document.getElementsByClassName("btnShowKit")[0];
-        if (KitShown === false) {
-            KitShown = true;
-            form.style.display = "block";
-            button.innerHTML = "Hide admin kit";
+        function onBtnClick() {
+            const form = document.getElementsByClassName("adminKit")[0];
+            const button = document.getElementsByClassName("btnShowKit")[0];
+            if (KitShown === false) {
+                KitShown = true;
+                form.style.display = "block";
+                button.innerHTML = "Hide admin kit";
+            }
+            else {
+                KitShown = false;
+                form.style.display = "none";
+                button.innerHTML = "Show admin kit";
+            }
         }
-        else {
-            KitShown = false;
-            form.style.display = "none";
-            button.innerHTML = "Show admin kit";
-        }
-    }
-    document.addEventListener("DOMContentLoaded", function () {
-        const btn = document.getElementsByClassName("btnShowKit")[0];
-        btn.addEventListener("click", onBtnClick);
-    })
-</script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const btn = document.getElementsByClassName("btnShowKit")[0];
+            btn.addEventListener("click", onBtnClick);
+        })
+    </script>
+</head>
 
 <body>
     <div class="container">
         <div class="videoLogo">
             <video src="video/Milky%20Way.mp4" muted autoplay loop></video>
             <div class="wrap">
-                <p>Welcome to our planet!</p>
-                <a href="#" class="btnLogo">Let's fly!</a>
-            </div>
+                <p>Welcome to our planet!</p> <a href="#" class="btnLogo">Let's fly!</a> </div>
         </div>
-        
         <header>
             <div class="row">
                 <div class="content col-md-6">
@@ -246,7 +244,7 @@
             <button class="btnShowKit">Show admin kit</button>
         </div>
         <div class="adminKit" style="display: none">
-            <form action="" method="post">
+            <form action="#" method="post">
                 <fieldset>
                     <legend>Браузер клиента</legend>
                     <label for="browser">Браузер</label>
@@ -259,7 +257,7 @@
                     <br>
                     <input type="submit" value="Send" class="btnSubmit"> </fieldset>
             </form>
-            <form action="" method="post">
+            <form action="#" method="post">
                 <fieldset>
                     <legend>Дата составления тикета</legend>
                     <label for="date">Дата</label>
@@ -277,8 +275,7 @@
                     <label for="week">Неделя</label>
                     <input name="week" id="week" type="week">
                     <br>
-                    <input type="submit" value="Send" class="btnSubmit"> 
-                    </fieldset>
+                    <input type="submit" value="Send" class="btnSubmit"> </fieldset>
             </form>
         </div>
     </div>
