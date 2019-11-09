@@ -4,119 +4,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Float Layout</title>
+    <title>Bootstrap 3 Layout</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/desktop.css">
-    <link rel="stylesheet" href="css/ipads.css">
-    <link rel="stylesheet" href="css/smartphones.css">
-    </head>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        let KitShown = false;
+
+        function onBtnClick() {
+            const form = document.getElementsByClassName("adminKit")[0];
+            const button = document.getElementsByClassName("btnShowKit")[0];
+            if (KitShown === false) {
+                KitShown = true;
+                form.style.display = "block";
+                button.innerHTML = "Hide admin kit";
+            }
+            else {
+                KitShown = false;
+                form.style.display = "none";
+                button.innerHTML = "Show admin kit";
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const btn = document.getElementsByClassName("btnShowKit")[0];
+            btn.addEventListener("click", onBtnClick);
+        })
+    </script>
+</head>
 
 <body>
     <div class="container">
+        <div class="videoLogo">
+            <video src="video/Milky%20Way.mp4" muted autoplay loop></video>
+            <div class="wrap">
+                <p>Welcome to our planet!</p> <a href="#" class="btnLogo">Let's fly!</a> </div>
+        </div>
         <header>
-            <div class="content">
-                <h1>Product name</h1>
-                <ul>
-                    <li>Put on this page information about your product</li>
-                    <li>A detailed description of your product</li>
-                    <li>Tell us about the advantages and merits</li>
-                    <li>Associate the page with the payment system</li>
-                </ul>
+            <div class="row">
+                <div class="content col-md-6">
+                    <h1>Product name</h1>
+                    <ul>
+                        <li>Put on this page information about your product</li>
+                        <li>A detailed description of your product</li>
+                        <li>Tell us about the advantages and merits</li>
+                        <li>Associate the page with the payment system</li>
+                    </ul>
+                </div>
+                <figure class="col-md-6"><img src="img/header.jpg" alt="Here is your product image!"></figure>
             </div>
-            <figure> <img src="img/header.jpg" alt="Here is your product image!"> </figure>
         </header>
         <main>
             <section id="about">
-                <h2>About your product</h2>
-                <video class="video" src="video/Night%20-%201099.mp4" controls></video>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis facilis fuga, illo&nbsp;at. Natus eos, eligendi illum rerum omnis porro&nbsp;ex, magni, explicabo veniam incidunt in&nbsp;quam sapiente ut&nbsp;ipsum.</p>
-                <p>Pariatur iure ab&nbsp;sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2> About your product</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis facilis fuga, illo&nbsp;at. Natus eos, eligendi illum rerum omnis porro&nbsp;ex, magni, explicabo veniam incidunt in&nbsp;quam sapiente ut&nbsp;ipsum.</p>
+                        <p>Pariatur iure ab&nbsp;sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</p>
+                    </div>
+                    <div class="col-md-6 video">
+                        <video id="video" src="video/Night%20-%201099.mp4" controls preload="metadata" muted loop autoplay> </video>
+                    </div>
+                </div>
             </section>
             <section id="dignities_pluses">
                 <h2>Dignity and pluses product</h2>
-                <ul class="dignities">
-                    <li class="dignity">
+                <div class="row dignities">
+                    <div class="col-md-6 dignity">
                         <details>
-                            <summary> Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore. </summary> Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore. </details>
-                    </li>
-                    <li class="dignity">
+                            <summary>Delectus 1 dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</summary>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</details>
+                    </div>
+                    <div class="col-md-6 dignity">
                         <details>
-                            <summary> Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore. </summary> Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore. </details>
-                    </li>
-                    <li class="dignity">
+                            <summary>Delectus 2 dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</summary>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</details>
+                    </div>
+                    <div class="col-md-6 dignity">
                         <details>
-                            <summary> Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore. </summary> Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore. </details>
-                    </li>
-                    <li class="dignity">
+                            <summary>Delectus 3 dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</summary>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</details>
+                    </div>
+                    <div class="col-md-6 dignity">
                         <details>
-                            <summary> Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore. </summary> Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore. </details>
-                    </li>
-                    <li class="dignity">
+                            <summary>Delectus 4 dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</summary>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</details>
+                    </div>
+                    <div class="col-md-6 dignity">
                         <details>
-                            <summary> Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore. </summary> Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore. </details>
-                    </li>
-                    <li class="dignity">
+                            <summary>Delectus 5 dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</summary>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</details>
+                    </div>
+                    <div class="col-md-6 dignity">
                         <details>
-                            <summary> Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore. </summary> Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore. </details>
-                    </li>
-                </ul>
+                            <summary>Delectus 6 dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</summary>Delectus dolorem vero quae beatae quasi dolor deserunt iste amet atque, impedit iure placeat, ullam. Reprehenderit aliquam, nemo cum velit ratione perferendis quas, maxime, quaerat porro totam, dolore minus inventore.</details>
+                    </div>
+                </div>
             </section>
             <section id="screenshots">
                 <h2>Screenshots</h2>
-                <article class="screenshot">
-                    <figure>
-                        <a href="img/screenshot-1.jpg" target="_blank"><img src="img/screenshot-1.jpg" alt="screenshot"></a>
-                    </figure>
-                    <h3>The description for the image</h3>
-                    <p>Pariatur iure ab&nbsp;sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</p>
-                </article>
-                <article class="screenshot">
-                    <figure>
-                        <a href="img/screenshot-2.jpg" target="_blank"><img src="img/screenshot-2.jpg" alt="screenshot"></a>
-                    </figure>
-                    <h3>The description for the image</h3>
-                    <p>Pariatur iure ab&nbsp;sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</p>
-                </article>
-                <article class="screenshot">
-                    <figure>
-                        <a href="img/screenshot-3.jpg" target="_blank"><img src="img/screenshot-3.jpg" alt="screenshot"></a>
-                    </figure>
-                    <h3>The description for the image</h3>
-                    <p>Pariatur iure ab&nbsp;sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</p>
-                </article>
-                <article class="screenshot">
-                    <figure>
-                        <a href="img/screenshot-4.jpg" target="_blank"><img src="img/screenshot-4.jpg" alt="screenshot"></a>
-                    </figure>
-                    <h3>The description for the image</h3>
-                    <p>Pariatur iure ab&nbsp;sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</p>
-                </article>
+                <div class="col-md-6">
+                    <article class="screenshot">
+                        <figure>
+                            <a href="img/screenshot-1.jpg" target="_blank"><img src="img/screenshot-1.jpg" alt="screenshot"></a>
+                        </figure>
+                        <h3>The description for the image</h3>
+                        <p>Pariatur iure ab&nbsp;sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</p>
+                    </article>
+                </div>
+                <div class="col-md-6">
+                    <article class="screenshot">
+                        <figure>
+                            <a href="img/screenshot-2.jpg" target="_blank"><img src="img/screenshot-2.jpg" alt="screenshot"></a>
+                        </figure>
+                        <h3>The description for the image</h3>
+                        <p>Pariatur iure ab&nbsp;sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</p>
+                    </article>
+                </div>
+                <div class="col-md-6">
+                    <article class="screenshot">
+                        <figure>
+                            <a href="img/screenshot-3.jpg" target="_blank"><img src="img/screenshot-3.jpg" alt="screenshot"></a>
+                        </figure>
+                        <h3>The description for the image</h3>
+                        <p>Pariatur iure ab&nbsp;sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</p>
+                    </article>
+                </div>
+                <div class="col-md-6">
+                    <article class="screenshot">
+                        <figure>
+                            <a href="img/screenshot-4.jpg" target="_blank"><img src="img/screenshot-4.jpg" alt="screenshot"></a>
+                        </figure>
+                        <h3>The description for the image</h3>
+                        <p>Pariatur iure ab&nbsp;sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo debitis dolor.</p>
+                    </article>
+                </div>
             </section>
             <section id="reviews">
                 <h2>Reviews</h2>
-                <div class="review"> <img src="img/userpic-1.jpg" alt="user avatar" class="userpic">
-                    <blockquote class="comment" cite="Lourens%20S.">
-                        <p class="text">Porro officia cumque sint deleniti nemo facere rem vitae odit inventore cum odio, iste quia doloribus autem aperiam nulla ea&nbsp;neque reprehenderit. Libero doloribus, possimus officiis sapiente necessitatibus commodi consectetur?</p>
-                        <p class="author">Lourens S.</p>
-                    </blockquote>
-                </div>
-                <div class="review"> <img src="img/userpic-2.jpg" alt="user avatar" class="userpic">
-                    <blockquote class="comment" cite="Lourens%20S.">
-                        <p class="text">Porro officia cumque sint deleniti nemo facere rem vitae odit inventore cum odio, iste quia doloribus autem aperiam nulla ea&nbsp;neque reprehenderit. Libero doloribus, possimus officiis sapiente necessitatibus commodi consectetur?</p>
-                        <p class="author">Lourens S.</p>
-                    </blockquote>
-                </div>
-                <div class="review"> <img src="img/userpic-3.jpg" alt="user avatar" class="userpic">
-                    <blockquote class="comment" cite="Lourens%20S.">
-                        <p class="text">Porro officia cumque sint deleniti nemo facere rem vitae odit inventore cum odio, iste quia doloribus autem aperiam nulla ea&nbsp;neque reprehenderit. Libero doloribus, possimus officiis sapiente necessitatibus commodi consectetur?</p>
-                        <p class="author">Lourens S.</p>
-                    </blockquote>
-                </div>
-                <div class="review"> <img src="img/userpic-4.jpg" alt="user avatar" class="userpic">
-                    <blockquote class="comment" cite="Lourens%20S.">
-                        <p class="text">Porro officia cumque sint deleniti nemo facere rem vitae odit inventore cum odio, iste quia doloribus autem aperiam nulla ea&nbsp;neque reprehenderit. Libero doloribus, possimus officiis sapiente necessitatibus commodi consectetur?</p>
-                        <p class="author">Lourens S.</p>
-                    </blockquote>
+                <div class="row">
+                    <div class="col-md-6 review"><img src="img/userpic-1.jpg" alt="user avatar" class="userpic">
+                        <blockquote class="comment" cite="Lourens%20S.">
+                            <p class="text">Porro officia cumque sint deleniti nemo facere rem vitae odit inventore cum odio, iste quia doloribus autem aperiam nulla ea&nbsp;neque reprehenderit. Libero doloribus, possimus officiis sapiente necessitatibus commodi consectetur?</p>
+                            <p class="author">Lourens S.</p>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-6 review"><img src="img/userpic-2.jpg" alt="user avatar" class="userpic">
+                        <blockquote class="comment" cite="Lourens%20S.">
+                            <p class="text">Porro officia cumque sint deleniti nemo facere rem vitae odit inventore cum odio, iste quia doloribus autem aperiam nulla ea&nbsp;neque reprehenderit. Libero doloribus, possimus officiis sapiente necessitatibus commodi consectetur?</p>
+                            <p class="author">Lourens S.</p>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-6 review"><img src="img/userpic-3.jpg" alt="user avatar" class="userpic">
+                        <blockquote class="comment" cite="Lourens%20S.">
+                            <p class="text">Porro officia cumque sint deleniti nemo facere rem vitae odit inventore cum odio, iste quia doloribus autem aperiam nulla ea&nbsp;neque reprehenderit. Libero doloribus, possimus officiis sapiente necessitatibus commodi consectetur?</p>
+                            <p class="author">Lourens S.</p>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-6 review"><img src="img/userpic-4.jpg" alt="user avatar" class="userpic">
+                        <blockquote class="comment" cite="Lourens%20S.">
+                            <p class="text">Porro officia cumque sint deleniti nemo facere rem vitae odit inventore cum odio, iste quia doloribus autem aperiam nulla ea&nbsp;neque reprehenderit. Libero doloribus, possimus officiis sapiente necessitatibus commodi consectetur?</p>
+                            <p class="author">Lourens S.</p>
+                        </blockquote>
+                    </div>
                 </div>
             </section>
             <section id="buy">
@@ -172,14 +216,14 @@
         </main>
         <footer>
             <h2>Contacts</h2>
-            <form action="#">
-                <fieldset>
-                    <input type="text" class="userName" placeholder="Your name:" required>
-                    <input placeholder="Your email:" type="email" required>
-                    <textarea name="text" id="message" cols="30" rows="10" class="message" placeholder="Your message:" required></textarea>
-                    <input type="submit" value="Send"> </fieldset>
-            </form> 
-            <address class="contact">
+            <div class="row">
+                <form class="col-md-offset-1 col-md-6" action="#">
+                    <fieldset>
+                        <input type="text" class="userName" placeholder="Jhon Smith" pattern="^([ А-Яа-яA-Za-z]+)" required>
+                        <input placeholder="example@mail.com" type="email" required>
+                        <textarea name="text" id="message" cols="30" rows="10" class="message" placeholder="Your message:" required></textarea>
+                        <input type="submit" value="Send"> </fieldset>
+                </form> <address class="col-md-4 contact">
                <ul>
                    <li id = "skype">here_your_login_skype</li>
                    <li id = "icq">279679659</li>
@@ -193,9 +237,50 @@
                 <a href="#">g</a>
                 <a href="#">x</a>
             </div>
-            </address> </footer>
+            </address></div>
+        </footer>
         <div class="copyright">Copyright &copy; 2014 Product name · PSD HTML CSS</div>
+        <div class="btnContainer">
+            <button class="btnShowKit">Show admin kit</button>
+        </div>
+        <div class="adminKit" style="display: none">
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Браузер клиента</legend>
+                    <label for="browser">Браузер</label>
+                    <input id="browser" list="browsers" name="myBrowser">
+                    <datalist id="browsers">
+                        <option label="Хром" value="Chrome"></option>
+                        <option label="Огненный лис" value="Firefox">></option>
+                        <option label="Эксплорер" value="InternetExplorer">></option>
+                    </datalist>
+                    <br>
+                    <input type="submit" value="Send" class="btnSubmit"> </fieldset>
+            </form>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Дата составления тикета</legend>
+                    <label for="date">Дата</label>
+                    <input name="date" id="date" type="date">
+                    <br>
+                    <label for="time">Время</label>
+                    <input name="time" id="time" type="time">
+                    <br>
+                    <label for="datetime-local">Текущая дата и время</label>
+                    <input name="datetime-local" id="datetime-local" type="datetime-local">
+                    <br>
+                    <label for="month">Месяц</label>
+                    <input name="month" id="month" type="month">
+                    <br>
+                    <label for="week">Неделя</label>
+                    <input name="week" id="week" type="week">
+                    <br>
+                    <input type="submit" value="Send" class="btnSubmit"> </fieldset>
+            </form>
+        </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 
 </html>
